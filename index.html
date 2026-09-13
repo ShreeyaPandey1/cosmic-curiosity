@@ -2,17 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover random Astronomy Picture of the Day entries from NASA." />
   <title>Cosmic Curiosity</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <div class="container">
-    <h1> Cosmic Curiosity</h1>
-    <p id="fact">Click the button to reveal a space fact!</p>
-    <button id="getFact"> Fact 🚀</button>
-  </div>
-  
+
+  <!-- Background video -->
+  <video
+    id="bg-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    aria-hidden="true"
+  >
+    <source src="bg.mp4" type="video/mp4" />
+  </video>
+
+  <!-- Dark overlay -->
+  <div class="overlay"></div>
+
+  <main class="container">
+    <header>
+      <p class="eyebrow">NASA • ASTRONOMY PICTURE OF THE DAY</p>
+      <h1>🌌 Cosmic Curiosity</h1>
+      <p class="subtitle">
+        Discover a random glimpse of the universe.
+      </p>
+    </header>
+
+    <section id="fact" class="fact-box" aria-live="polite">
+      <p>Click the button to reveal a space discovery.</p>
+    </section>
+
+    <button id="getFact" class="fact-button" type="button">
+      🚀 Discover
+    </button>
+
+    <footer>
+      Powered by NASA APOD
+    </footer>
+  </main>
 
   <script src="script.js"></script>
 </body>
